@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>resonhou-You Friend</title>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+</script>
+</head>
+<body>
+    <h1>我的第一个标题</h1>
+    <p>我的第一个段落。</p>
+    <button>Commit</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get("/api/hello", function(data, status){
+                    alert("数据： " + data + "\n状态： " + status);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
