@@ -13,8 +13,8 @@
     <script>
         $(document).ready(function(){
             $("button").click(function(){
-                $.get("/api/hello", function(data, status){
-                    $('p').html = "数据： " + data + "\n状态： " + status;
+                $.get("/api/hello?name=resonhou", function(data, status){
+                    $('p').html("数据： " + data + "\n状态： " + status);
                     alert("数据： " + data + "\n状态： " + status);
                 });
             });
